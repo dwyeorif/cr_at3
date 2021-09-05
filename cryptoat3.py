@@ -123,7 +123,7 @@ while True:
             krw_balance = round(upbit.get_balance('KRW') + binance_balance('USDT')*p_exchange)
             ticker_balance = round(upbit.get_balance('KRW-' + ticker) + binance_balance(ticker))
             now_premium = round(get_premium((binance_usd_price(ticker)*p_exchange), upbit_price(ticker), ticker), 2)
-            post_message(myToken, "#stock", 'Now: ' + str(now_premium) + ' / Standard: ' + str(round(p_standard, 2)) + 'Exchange: ' + str(p_exchange) + '\nCrypto: '+str(ticker_balance) + ' / KRW:  ' + str(krw_balance))
+            post_message(myToken, "#stock", 'Now: ' + str(now_premium) + ' / Std: ' + str(round(p_standard, 2)) + ' / Exc: ' + str(p_exchange) + '\nCrypto: '+str(ticker_balance) + ' / KRW:  ' + str(krw_balance))
             time.sleep(7)
 
     except Exception as e:
